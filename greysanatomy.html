@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grey's Anatomy - Tienda Temática</title>
+    <link rel="stylesheet" href="estilo.css"> 
+    <link rel="stylesheet" href="formularios.css"> 
+	<link rel="stylesheet" href="productos.css"> 
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <link rel="icon" type="image/png" href="Imagenes_de_logo_en_negativo/favicon.png">
+</head>
+<body>
+    
+    <header class="contenedor-cabecera">
+        <div class="seccion-superior">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Imagenes_de_logo_en_negativo/Recurso 6.png" alt="Logo de Tienda Temática" class="imagen-logo">
+                </a>
+                <h1>Tienda Temática</h1>
+            </div>
+
+            <div class="barra-busqueda-central">
+                <input type="text" placeholder="Buscar productos..." class="input-busqueda" id="inputBusqueda"> 
+                <button class="boton-busqueda" id="botonBusqueda">&#128269;</button>
+            </div>
+
+            <div class="navegacion-y-iconos">
+                <nav class="navegacion-principal">
+                    <ul class="enlaces-navegacion">
+                        <li><a href="index.html" class="enlace-navegacion">Inicio</a></li>
+                        <li><a href="index.html" class="enlace-navegacion">Temáticas</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="enlace-navegacion">Contactos</a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="https://wa.me/50375081006" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> Teléfono: 7508-1006
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/Tienda.Tematicasv" target="_blank">
+                                        <i class="fab fa-facebook-f"></i> Facebook: Tienda Tematica
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/tienda.tematica/" target="_blank">
+                                        <i class="fab fa-instagram"></i> Instagram: tienda.tematica
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:mitiendatematica@gmail.com">
+                                        <i class="fas fa-envelope"></i> Correo: mitiendatematica@gmail.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="iconos-derecha">
+                    <a href="#" id="abrirModalUsuario"> 
+                        <img src="Imagenes_de_interfaz/Usuario.png" alt="Crear usuario" class="icono-usuario">
+                    </a>
+                    <a href="#" id="abrirCarrito"> 
+                        <img src="Imagenes_de_interfaz/Carrito.png" alt="Carrito de compras" class="icono-carrito">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="contenido-principal">
+        <h2 class="titulo-seccion">🩺 Productos de Grey's Anatomy 💙</h2>
+        <div class="categorias">
+            
+            <a href="portadocumentosga.html" class="caja-categoria">
+                <img src="Imagenes_de_Tematicas/greyanatomia.jpg" alt="Portadocumentos"> 
+                <span>Portadocumentos</span>
+            </a>
+            
+        </div>
+    </main>
+
+    <footer class="enlaces-redes-sociales">
+        <div class="footer-contenido">
+            <div class="info-pais">
+                <img src="Imagenes_de_interfaz/bandera2-sv.png" alt="Bandera de El Salvador" class="icono-bandera">
+                <p>El Salvador | Mantente en contacto con nosotros | Escribenos al 7044-3932</p>
+            </div>
+            
+            <div class="redes-sociales-iconos">
+                <a href="https://www.facebook.com/Tienda.Tematicasv" target="_blank" class="icono-social">
+                    <img src="Imagenes_de_interfaz/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/tienda.tematica/" target="_blank" class="icono-social">
+                    <img src="Imagenes_de_interfaz/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/50370443932" target="_blank" class="icono-social">
+                    <img src="Imagenes_de_interfaz/whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modalFormulario" class="modal-fondo">
+        <div class="modal-contenedor">
+            <span class="cerrar-modal">&times;</span>
+            
+            <div id="formularioIngreso" class="contenedor-formulario">
+                <h2>Iniciar sesión</h2>
+                <form action="#" method="post">
+                    <div class="grupo-campo">
+                        <label for="login-nombre">Correo Electronico</label>
+                        <input type="text" id="login-nombre" name="nombre_completo" placeholder="Escribe tu correo electronico" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="login-contrasena">Contraseña</label>
+                        <input type="password" id="login-contrasena" name="contrasena" placeholder="Ingresa tu contraseña" required>
+                        <i class="fas fa-eye-slash" id="togglePasswordLogin"></i>
+                    </div>
+                    <button type="submit" class="btn-principal">Ingresar</button>
+                </form>
+                <div class="enlaces-opciones">
+                    <a href="#" id="abrirRegistro">Crear una cuenta</a>
+                    <a href="mailto:mitiendatematica@gmail.com?subject=Ayuda con Contraseña (Olvidada)" class="enlace-opcion">¿Olvidaste tu contraseña?</a>
+                </div>
+                <a href="index.html" class="enlace-opcion">Ingresar como invitado</a>
+            </div>
+
+            <div id="formularioRegistro" class="contenedor-formulario" style="display: none;">
+                <h2>Crear cuenta</h2>
+                <form action="https://formspree.io/f/xnngzopj" method="POST">
+                    <div class="grupo-campo">
+                        <label for="registro-nombre">Nombre y Apellido</label>
+                        <input type="text" id="registro-nombre" name="nombre_completo" placeholder="Escribe tu nombre y apellido" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="registro-correo">Correo Electrónico</label>
+                        <input type="email" id="registro-correo" name="correo_electronico" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="registro-telefono">Número de Teléfono</label>
+                        <input type="tel" id="registro-telefono" name="numero_telefono" placeholder="Ej: 7000-0000" pattern="[0-9]{4}-[0-9]{4}">
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="registro-contrasena">Crear Contraseña</label>
+                        <input type="password" id="registro-contrasena" placeholder="Crea una contraseña segura" required>
+                        <i class="fas fa-eye-slash" id="togglePasswordRegistro"></i>
+                        <span id="mensajeSeguridadContrasena" class="mensaje-error"></span> 
+                    </div>
+                    <button type="submit" id="btnRegistrarse" class="btn-principal">Registrarse</button>
+                </form>
+                <a href="#" id="abrirIngreso" class="enlace-opcion">¿Ya tienes una cuenta? Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modalCarrito" class="modal-fondo">
+        <div class="modal-contenedor">
+            <span class="cerrar-modal" id="cerrarCarritoModal">&times;</span>
+            <div id="contenidoCarrito">
+                <h2>🛒 Carrito de Compras</h2>
+                <ul id="listaCarrito">
+                    </ul>
+                <p id="carritoVacio" style="text-align: center; color: gray;">El carrito está vacío.</p>
+                <div id="resumenTotal">
+                    <hr style="border-color: rgba(0, 206, 209, 0.5);">
+                    <p>Total: <strong id="totalCarrito">$0.00</strong></p>
+                </div>
+                <button class="btn-principal">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* =======================================
+    ESTILOS ESPECÍFICOS DE LA PÁGINA DE CHECKOUT
+    ======================================= */
+
+.contenido-checkout {
+    /* Ajusta el padding-top si tu header es fijo para evitar que el contenido se oculte */
+    padding-top: 120px; 
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto 50px auto;
+}
+
+.titulo-seccion-checkout {
+    text-align: center;
+    font-size: 3em;
+    color: #FF4500;
+    margin-bottom: 30px;
+}
+
+/* =======================================
+    Estructura de Columnas (Responsividad)
+    ======================================= */
+.contenedor-cajas-checkout {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Clave para la responsividad: las cajas se apilan si no hay espacio */
+}
+
+.caja-formulario-checkout,
+.caja-resumen-checkout {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.caja-formulario-checkout {
+    flex: 2; /* Ocupa 2/3 del espacio */
+    min-width: 350px;
+}
+
+.caja-resumen-checkout {
+    flex: 1; /* Ocupa 1/3 del espacio */
+    background-color: #f7f7f7;
+    border: 1px solid #00CED1;
+    height: fit-content;
+}
+
+/* 🚀 RESPONSIVIDAD PARA MÓVILES/TABLETAS */
+@media (max-width: 850px) {
+    .contenedor-cajas-checkout {
+        flex-direction: column; /* Apila las cajas verticalmente */
+    }
+    .caja-formulario-checkout,
+    .caja-resumen-checkout {
+        flex: 1 1 100%; /* Ocupan todo el ancho */
+        min-width: unset;
+    }
+    .caja-resumen-checkout {
+        order: -1; /* Mueve el resumen encima del formulario en móvil */
+    }
+    .titulo-seccion-checkout {
+        font-size: 2em; /* Título más pequeño en móvil */
+    }
+}
+
+
+/* =======================================
+    Estilos de Títulos y Formularios
+    ======================================= */
+.caja-formulario-checkout h3,
+.caja-resumen-checkout h3 {
+    color: #00CED1;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Ajuste de visibilidad del texto en inputs */
+.caja-formulario-checkout input[type="text"],
+.caja-formulario-checkout input[type="email"],
+.caja-formulario-checkout input[type="tel"],
+.caja-formulario-checkout textarea,
+.caja-formulario-checkout input[type="password"] { 
+    color: #333 !important; 
+}
+
+
+/* =======================================
+    RESUMEN DE PRODUCTOS (Estilos Compactos y Uniformes)
+    ======================================= */
+
+#listaResumenProductos {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de cada ítem del resumen */
+.resumen-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd; /* Separador */
+}
+
+.resumen-item:last-child {
+    border-bottom: none;
+}
+
+/* 🖼️ ESTILO CLAVE PARA IMÁGENES UNIFORMES Y CUADRADAS */
+.item-imagen img {
+    width: 60px; /* Tamaño fijo */
+    height: 60px; /* Tamaño fijo, hace la imagen cuadrada */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 4px;
+}
+
+/* Contenedor de los detalles (Nombre, Cód, Cantidad) */
+.item-detalles-compacto {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.item-nombre {
+    font-weight: 700;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.item-datos {
+    color: #666;
+    margin: 0;
+    font-size: 0.85em; 
+}
+
+/* Total del ítem alineado a la derecha */
+.item-total-compacto {
+    width: 65px; 
+    text-align: right;
+    font-size: 1em;
+    color: #FF4500;
+}
+
+/* =======================================
+    Totales y Botón
+    ======================================= */
+
+.resumen-totales {
+    padding-top: 15px;
+}
+
+.resumen-totales p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.total-final {
+    font-size: 1.4em;
+    color: #000;
+    font-weight: 700;
+}
+
+#checkoutTotal {
+    color: #FF4500;
+}
+
+.btn-confirmar-pedido {
+    margin-top: 20px;
+    background-color: #00CED1; 
+    transition: background-color 0.3s;
+}
+
+.btn-confirmar-pedido:hover {
+    background-color: #00A3A6; 
+}
+
+.nota-pago {
+    font-size: 0.9em;
+    color: gray;
+    text-align: center;
+    margin-top: 10px;
+}

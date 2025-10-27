@@ -1,0 +1,208 @@
+/* =======================================
+   ESTILOS ESPECÍFICOS DE LA PÁGINA DE PRODUCTOS
+   ======================================= */
+
+/* Ajuste de Margen para el Contenido Principal debido al Header Fijo */
+.contenido-productos {
+    padding-top: 120px; /* Espacio para que el header fijo no oculte el título */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto 50px auto;
+}
+
+/* Título de la Sección de Productos */
+.titulo-seccion {
+    text-align: center;
+    font-size: 3em;
+    color: #00CED1;
+    margin-bottom: 30px;
+}
+
+/* GRID GENERAL DE PRODUCTOS */
+.grid-productos {
+    display: grid;
+    /* Mínimo 300px, adaptándose al ancho total */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* CAJA INDIVIDUAL DE PRODUCTO */
+.caja-producto {
+    background-color: #fff;
+    border: 2px solid #00A6A9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.caja-producto:hover {
+     transform: translateY(-5px);
+}
+
+/* --- CARRUSEL DE PRODUCTO --- */
+.producto-carrusel-contenedor {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Altura fija para todas las imágenes */
+}
+
+.producto-imagen-carrusel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Oculta todas las imágenes por defecto (controlado por JS) */
+    transition: transform 0.3s ease-out; /* Transición suave para el zoom */
+    cursor: zoom-in; /* Indica que la imagen es interactiva */
+    transform-origin: center center;
+    /* Variables CSS que serán modificadas por JavaScript para el zoom */
+    --zoom-x: 0;
+    --zoom-y: 0;
+}
+
+.producto-imagen-carrusel.activo {
+    display: block; /* Muestra solo la imagen activa */
+}
+
+/* Botones de navegación del carrusel */
+.carrusel-boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 50;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    border-radius: 50%; /* Botones redondos */
+}
+
+.carrusel-boton:hover {
+    opacity: 1;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* --- DETALLES DEL PRODUCTO --- */
+.producto-detalles {
+    padding: 20px;
+}
+
+.producto-detalles h3 {
+    color: #00CED1;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.producto-detalles p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.producto-detalles .precio {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FF4500; /* Color llamativo para el precio */
+    margin: 15px 0;
+}
+
+.btn-agregar-carrito {
+    background-color: #00CED1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #00A6A9;
+}
+
+/* --- ESTILOS DE ZOOM --- */
+.imagen-zoom {
+    /* La transformación usa las variables --zoom-x y --zoom-y definidas en el HTML */
+    transform: scale(2) translate(var(--zoom-x), var(--zoom-y)) !important; 
+    cursor: zoom-out !important; 
+}
+
+/* =======================================
+   ESTILOS PARA EL MODAL DEL CARRITO (IMPORTANTE PARA QUE NO SE CORTE EL TEXTO)
+   ======================================= */
+
+#listaCarrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+/* Asegura que el div contenedor del texto pueda crecer verticalmente */
+#listaCarrito li > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    min-width: 0; /* Permite que el contenido se encoja si es necesario */
+}
+
+/* Permite que el texto del nombre del producto salte de línea */
+#listaCarrito li > div:first-child div {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word; /* Para nombres muy largos */
+}
+
+#listaCarrito li > div:first-child img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Elemento individual del carrito */
+#listaCarrito li {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.btn-eliminar-item {
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-eliminar-item:hover {
+    background-color: #CC3700;
+}
+
+#resumenTotal {
+    text-align: right;
+    font-size: 1.4em;
+    color: #00CED1;
+    padding-top: 10px;
+}
+

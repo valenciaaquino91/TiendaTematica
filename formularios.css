@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* Estilos para el modal y los formularios */
+.modal-fondo {
+    display: none; /* <--- CORRECCIÓN CLAVE: Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); 
+    
+    /* Propiedades para centrar (el display: flex se activa con JS) */
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Contenedor del formulario con efecto de cuadrícula */
+.modal-contenedor {
+    position: relative;
+    z-index: 1001;
+    background: linear-gradient(to bottom, #001f3f, #003366);
+    background-image:
+        linear-gradient(to right, rgba(0, 206, 209, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 206, 209, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 206, 209, 0.6);
+    transition: box-shadow 0.3s ease;
+}
+
+.modal-contenedor:hover {
+    box-shadow: 0 0 35px rgba(0, 206, 209, 0.9);
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1002;
+    transition: color 0.2s ease;
+}
+
+.cerrar-modal:hover {
+    color: #00CED1;
+}
+
+/* Estilos de los campos del formulario */
+.contenedor-formulario h2 {
+    margin-bottom: 20px;
+    color: #00CED1;
+    text-shadow: 0 0 10px #00CED1;
+    font-size: 2.8em;
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00CED1;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.grupo-campo input {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 206, 209, 0.5);
+    outline: none;
+    color: #E0FFFF;
+    font-size: 1em;
+    transition: border-bottom 0.3s ease;
+}
+
+.grupo-campo input:focus {
+    border-bottom: 1px solid #00CED1;
+}
+
+.grupo-campo input::placeholder {
+    color: rgba(0, 206, 209, 0.4);
+    transition: color 0.3s ease;
+}
+
+.grupo-campo input:focus::placeholder {
+    color: transparent;
+}
+
+/* Estilos para el ícono de ojo (Mostrar/Ocultar Contraseña) */
+.grupo-campo .fa-eye-slash, .grupo-campo .fa-eye {
+    position: absolute;
+    right: 0px; 
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(0, 206, 209, 0.7);
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.grupo-campo .fa-eye-slash:hover, .grupo-campo .fa-eye:hover {
+    color: #00CED1;
+}
+
+/* Ajuste para evitar que el texto se solape con el ícono */
+#login-contrasena, #registro-contrasena {
+    padding-right: 30px; 
+}
+
+
+.btn-principal {
+    width: 100%;
+    padding: 12px;
+    background-color: #00CED1;
+    color: #001f3f;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 206, 209, 0.5);
+    transition: 0.3s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-principal:hover {
+    background-color: #00A6A9;
+    box-shadow: 0 0 15px #00CED1;
+}
+
+.enlace-opcion, .enlaces-opciones a {
+    display: block;
+    margin-top: 15px;
+    color: #00CED1;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+.enlace-opcion:hover, .enlaces-opciones a:hover {
+    text-decoration: underline;
+    color: #00A6A9;
+    text-shadow: 0 0 5px #00CED1;
+}
+
+.enlaces-opciones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mensaje-error {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    font-weight: normal;
+    color: red;
+}

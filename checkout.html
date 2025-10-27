@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Finalizar Compra</title>
+    <link rel="stylesheet" href="estilo.css"> 
+    <link rel="stylesheet" href="formularios.css"> 
+    <link rel="stylesheet" href="checkout.css"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="Imagenes_de_logo_en_negativo/favicon.png">
+</head>
+<body>
+    
+    <header class="contenedor-cabecera">
+        <div class="seccion-superior">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Imagenes_de_logo_en_negativo/Recurso 6.png" alt="Logo de Tienda Temática" class="imagen-logo">
+                </a>
+                <h1>Tienda Temática</h1>
+            </div>
+
+            <div class="barra-busqueda-central">
+                <input type="text" placeholder="Buscar productos..." class="input-busqueda">
+                <button class="boton-busqueda">&#128269;</button>
+            </div>
+
+            <div class="navegacion-y-iconos">
+                <nav class="navegacion-principal">
+                    <ul class="enlaces-navegacion">
+                        <li><a href="index.html" class="enlace-navegacion">Inicio</a></li>
+                        <li><a href="Anime.html" class="enlace-navegacion">Temáticas</a></li>
+                        <li><a href="#" class="enlace-navegacion">Contactos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main class="contenido-checkout">
+        <h2 class="titulo-seccion-checkout">Proceso de Pago y Envío 🚢</h2>
+        <div class="contenedor-cajas-checkout">
+            
+            <div class="caja-formulario-checkout">
+                <h3>1. Información de Envío</h3>
+                <form action="https://formspree.io/f/xnngzopj" method="POST" id="formularioCheckout">
+                    
+                    <div class="grupo-campo">
+                        <label for="nombre">Nombre Completo <span style="color: red;">*</span></label>
+                        <input type="text" id="nombre" name="Nombre" required> 
+                    </div>
+                    
+                    <div class="grupo-campo">
+                        <label for="correo">Correo Electrónico (Opcional)</label>
+                        <input type="email" id="correo" name="Correo"> 
+                    </div>
+                    
+                    <div class="grupo-campo">
+                        <label for="telefono">Teléfono <span style="color: red;">*</span></label>
+                        <input type="tel" id="telefono" name="Telefono" placeholder="Ej: 7000-0000" pattern="[0-9]{4}-[0-9]{4}" required>
+                    </div>
+                    
+                    <div class="grupo-campo">
+                        <label for="direccion">Dirección Completa <span style="color: red;">*</span></label>
+                        <textarea id="direccion" name="Direccion" rows="6" 
+                            placeholder="Por favor ingresa tu dirección completa: Incluye, Departamento, municipio, colonia, número de casa y un punto de referencia para que sea más fácil para el repartidor entregar tu paquete." 
+                            required></textarea>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="comentarios">Comentarios Adicionales (Opcional)</label>
+                        <textarea id="comentarios" name="Comentarios Adicionales" rows="5" placeholder="Ej: Entregar solo después de las 3 PM."></textarea>
+                    </div>
+
+                    
+                    <h3>2. Pago con Tarjeta de Crédito/Débito <span style="color: red;">*</span></h3>
+                    <p class="nota-pago" style="text-align: left;">Pago único aceptado. En una implementación real, aquí se usaría un Widget de pago seguro.</p>
+                    
+                    <div class="grupo-campo">
+                        <label for="numeroTarjeta">Número de Tarjeta</label>
+                        <input type="text" id="numeroTarjeta"  placeholder="XXXX XXXX XXXX XXXX" 
+                                pattern="[0-9\s]{16,19}" required>
+                    </div>
+
+                    <div class="fila-campos">
+                        <div class="grupo-campo">
+                            <label for="fechaExp">Fecha de Exp. (MM/AA)</label>
+                            <input type="text" id="fechaExp"  placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" required>
+                        </div>
+                        <div class="grupo-campo">
+                            <label for="cvc">CVC</label>
+                            <input type="text" id="cvc"  placeholder="123" pattern="[0-9]{3,4}" required>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" name="Detalle_del_Pedido_Resumen" id="detallePedidoInput">
+                    
+                    <input type="hidden" name="Total_Final_de_Compra" id="totalCompraInput">
+
+                    <button type="submit" class="btn-principal btn-confirmar-pedido">
+                        Pagar $XX.XX y Confirmar Pedido
+                    </button>
+                    <p class="nota-pago">Recibirás un correo o un mensaje a WhatsApp de confirmación con los detalles del pedido.</p>
+                </form>
+            </div>
+            
+            <div class="caja-resumen-checkout">
+                <h3>Resumen de la Orden</h3>
+                <ul id="listaResumenProductos">
+                    <p>Cargando productos...</p>
+                </ul>
+                <div class="resumen-totales">
+                    <p>Subtotal: <span id="checkoutSubtotal">$0.00</span></p>
+                    <p>Costo de Envío: <span id="checkoutEnvio">$0.00</span></p>
+                    <hr>
+                    <p class="total-final">Total Final: <strong id="checkoutTotal">$0.00</strong></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script> 
+</body>
+</html>

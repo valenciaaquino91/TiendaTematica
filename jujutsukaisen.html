@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jujutsu Kaisen - Tienda Temática</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="formularios.css">
+    <link rel="stylesheet" href="productos.css"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="Imagenes_de_logo_en_negativo/favicon.png">
+</head>
+<body>
+    
+    <header class="contenedor-cabecera">
+        <div class="seccion-superior">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Imagenes_de_logo_en_negativo/Recurso 6.png" alt="Logo de Tienda Temática" class="imagen-logo">
+                </a>
+                <h1>Tienda Temática</h1>
+            </div>
+
+            <div class="barra-busqueda-central">
+                <input type="text" placeholder="Buscar productos..." class="input-busqueda" id="inputBusqueda">
+                <button class="boton-busqueda" id="botonBusqueda">&#128269;</button>
+            </div>
+
+            <div class="navegacion-y-iconos">
+                <nav class="navegacion-principal">
+                    <ul class="enlaces-navegacion">
+                        <li><a href="index.html" class="enlace-navegacion">Inicio</a></li>
+                        <li><a href="Anime.html" class="enlace-navegacion">Temáticas</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="enlace-navegacion">Contactos</a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="https://wa.me/50375081006" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> Teléfono: 7508-1006
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/Tienda.Tematicasv" target="_blank">
+                                        <i class="fab fa-facebook-f"></i> Facebook: Tienda Tematica
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/tienda.tematica/" target="_blank">
+                                        <i class="fab fa-instagram"></i> Instagram: tienda.tematica
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:mitiendatematica@gmail.com">
+                                        <i class="fas fa-envelope"></i> Correo: mitiendatematica@gmail.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="iconos-derecha">
+                    <a href="#" id="abrirModalUsuario">
+                        <img src="Imagenes_de_interfaz/Usuario.png" alt="Crear usuario" class="icono-usuario">
+                    </a>
+                    <a href="#" id="abrirCarrito">
+                        <img src="Imagenes_de_interfaz/Carrito.png" alt="Carrito de compras" class="icono-carrito">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="contenido-productos">
+        <h2 class="titulo-seccion">Productos de Jujutsu Kaisen 呪術廻戦</h2>
+        
+        <div class="grid-productos">
+            
+            <div class="caja-producto" data-nombre="Anillo de Sukuna" data-precio="7.00" data-id="j1">
+                <div class="producto-carrusel-contenedor">
+                    <img src="Aime/menu_jujutsu/AnilloSukuna1.jpg" alt="Anillo de Sukuna Foto 1" class="producto-imagen-carrusel activo" data-index="0">
+                    <img src="Aime/menu_jujutsu/AnilloSukuna2.jpg.jpg" alt="Anillo de Sukuna Foto 2" class="producto-imagen-carrusel" data-index="1">
+                    <img src="Aime/menu_jujutsu/AnilloSukuna3.jpg" alt="Anillo de Sukuna Foto 3" class="producto-imagen-carrusel" data-index="2">
+                    <button class="carrusel-boton prev" data-producto="j1">&#10094;</button>
+                    <button class="carrusel-boton next" data-producto="j1">&#10095;</button>
+                </div>
+                <div class="producto-detalles">
+                    <h3>Anillo de Ryomen Sukuna</h3>
+                    <p><strong>Precio:</strong> <span class="precio">$7.00</span></p>
+                    <p><strong>Descripción:</strong> Réplica del anillo ceremonial con el diseño de las maldiciones de Sukuna. Metal resistente para fans de las maldiciones.</p>
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <div class="caja-producto" data-nombre="Corbata de Nanami Kento" data-precio="10.00" data-id="j2">
+                <div class="producto-carrusel-contenedor">
+                    <img src="Aime/menu_jujutsu/CorbataNanami1.jpg" alt="Corbata Nanami Foto 1" class="producto-imagen-carrusel activo" data-index="0">
+                    <img src="Aime/menu_jujutsu/CorbataNanami2.jpg" alt="Corbata Nanami Foto 2" class="producto-imagen-carrusel" data-index="1">
+                    <img src="Aime/menu_jujutsu/CorbataNanami3.jpg" alt="Corbata Nanami Foto 3" class="producto-imagen-carrusel" data-index="2">
+                    <button class="carrusel-boton prev" data-producto="j2">&#10094;</button>
+                    <button class="carrusel-boton next" data-producto="j2">&#10095;</button>
+                </div>
+                <div class="producto-detalles">
+                    <h3>Corbata Rayada de Nanami Kento</h3>
+                    <p><strong>Precio:</strong> <span class="precio">$10.00</span></p>
+                    <p><strong>Descripción:</strong> Corbata con el patrón característico de Nanami. Perfecta para un cosplay elegante o para el trabajo de 7:3.</p>
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="caja-producto" data-nombre="Pin de Yuju Itadori" data-precio="7.00" data-id="j3">
+                <div class="producto-carrusel-contenedor">
+                    <img src="Aime/menu_jujutsu/PinItadori1.jpg" alt="Pin Itadori Foto 1" class="producto-imagen-carrusel activo" data-index="0">
+                    <img src="Aime/menu_jujutsu/PinItadori1.jpg" alt="Pin Itadori Foto 2" class="producto-imagen-carrusel" data-index="1">
+                    <img src="Aime/Aime/menu_jujutsu/PinItadori1.jpg" alt="Pin Itadori Foto 3" class="producto-imagen-carrusel" data-index="2">
+                    <button class="carrusel-boton prev" data-producto="j3">&#10094;</button>
+                    <button class="carrusel-boton next" data-producto="j3">&#10095;</button>
+                </div>
+                <div class="producto-detalles">
+                    <h3>Pin Esmaltado de Yuji Itadori</h3>
+                    <p><strong>Precio:</strong> <span class="precio">$7.00</span></p>
+                    <p><strong>Descripción:</strong> Pin de metal esmaltado de Yuji Itadori, el recipiente de Sukuna. Ideal para coleccionar y demostrar tu amor por el protagonista.</p>
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="caja-producto" data-nombre="Pin de Satoru Gojo (pequeño)" data-precio="6.00" data-id="j4">
+                <div class="producto-carrusel-contenedor">
+                    <img src="Aime/menu_jujutsu/PinGojoPequeno1.jpg" alt="Pin Gojo Pequeño Foto 1" class="producto-imagen-carrusel activo" data-index="0">
+                    <img src="Aime/menu_jujutsu/PinGojoPequeno1.jpg" alt="Pin Gojo Pequeño Foto 2" class="producto-imagen-carrusel" data-index="1">
+                    <img src="Aime/menu_jujutsu/PinGojoPequeno1.jpg" alt="Pin Gojo Pequeño Foto 3" class="producto-imagen-carrusel" data-index="2">
+                    <button class="carrusel-boton prev" data-producto="j4">&#10094;</button>
+                    <button class="carrusel-boton next" data-producto="j4">&#10095;</button>
+                </div>
+                <div class="producto-detalles">
+                    <h3>Pin de Satoru Gojo (Pequeño)</h3>
+                    <p><strong>Precio:</strong> <span class="precio">$6.00</span></p>
+                    <p><strong>Descripción:</strong> Pin pequeño y discreto del hechicero más fuerte, Satoru Gojo. Perfecto para cualquier fanático.</p>
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="caja-producto" data-nombre="Pin de Satoru Gojo (grande)" data-precio="7.00" data-id="j5">
+                <div class="producto-carrusel-contenedor">
+                    <img src="Aime/menu_jujutsu/PinGojoGrande1.jpg" alt="Pin Gojo Grande Foto 1" class="producto-imagen-carrusel activo" data-index="0">
+                    <img src="Aime/menu_jujutsu/PinGojoGrande1.jpg" alt="Pin Gojo Grande Foto 2" class="producto-imagen-carrusel" data-index="1">
+                    <img src="Aime/menu_jujutsu/PinGojoGrande1.jpg" alt="Pin Gojo Grande Foto 3" class="producto-imagen-carrusel" data-index="2">
+                    <button class="carrusel-boton prev" data-producto="j5">&#10094;</button>
+                    <button class="carrusel-boton next" data-producto="j5">&#10095;</button>
+                </div>
+                <div class="producto-detalles">
+                    <h3>Pin de Satoru Gojo (Grande)</h3>
+                    <p><strong>Precio:</strong> <span class="precio">$7.00</span></p>
+                    <p><strong>Descripción:</strong> Versión más grande y detallada del Pin de Gojo. Muestra tu aprecio por el Six Eyes con este accesorio llamativo.</p>
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="caja-producto" data-nombre="Billetera Satoru Gojo" data-precio="15.00" data-id="j6">
+                <div class="producto-carrusel-contenedor">
+                    <img src="Aime/menu_jujutsu/BilleteraGojo1.jpg" alt="Billetera Gojo Foto 1" class="producto-imagen-carrusel activo" data-index="0">
+                    <img src="Aime/menu_jujutsu/BilleteraGojo1.jpg" alt="Billetera Gojo Foto 2" class="producto-imagen-carrusel" data-index="1">
+                    <img src="Aime/menu_jujutsu/BilleteraGojo1.jpg" alt="Billetera Gojo Foto 3" class="producto-imagen-carrusel" data-index="2">
+                    <button class="carrusel-boton prev" data-producto="j6">&#10094;</button>
+                    <button class="carrusel-boton next" data-producto="j6">&#10095;</button>
+                </div>
+                <div class="producto-detalles">
+                    <h3>Billetera de Satoru Gojo</h3>
+                    <p><strong>Precio:</strong> <span class="precio">$15.00</span></p>
+                    <p><strong>Descripción:</strong> Billetera de cuero con un diseño minimalista inspirado en Satoru Gojo. Ideal para llevar tu dinero con seguridad.</p>
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    
+    <footer class="enlaces-redes-sociales">
+        <div class="footer-contenido">
+            <div class="info-pais">
+                <img src="Imagenes_de_interfaz/bandera2-sv.png" alt="Bandera de El Salvador" class="icono-bandera">
+                <p>El Salvador | Mantente en contacto con nosotros | Escribenos al 7044-3932</p>
+            </div>
+            
+            <div class="redes-sociales-iconos">
+                <a href="https://www.facebook.com/Tienda.Tematicasv" target="_blank" class="icono-social">
+                    <img src="Imagenes_de_interfaz/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/tienda.tematica/" target="_blank" class="icono-social">
+                    <img src="Imagenes_de_interfaz/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/50370443932" target="_blank" class="icono-social">
+                    <img src="Imagenes_de_interfaz/whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modalFormulario" class="modal-fondo">
+        <div class="modal-contenedor">
+            <span class="cerrar-modal">&times;</span>
+            
+            <div id="formularioIngreso" class="contenedor-formulario">
+                <h2>Iniciar sesión</h2>
+                <form action="#" method="post">
+                    <div class="grupo-campo">
+                        <label for="login-nombre">Correo Electronico</label>
+                        <input type="text" id="login-nombre" name="nombre_completo" placeholder="Escribe tu correo electronico" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="login-contrasena">Contraseña</label>
+                        <input type="password" id="login-contrasena" name="contrasena" placeholder="Ingresa tu contraseña" required>
+                        <i class="fas fa-eye-slash" id="togglePasswordLogin"></i>
+                    </div>
+                    <button type="submit" class="btn-principal">Ingresar</button>
+                </form>
+                <div class="enlaces-opciones">
+                    <a href="#" id="abrirRegistro">Crear una cuenta</a>
+                    <a href="mailto:mitiendatematica@gmail.com?subject=Ayuda con Contraseña (Olvidada)" class="enlace-opcion">¿Olvidaste tu contraseña?</a>
+                </div>
+                <a href="index.html" class="enlace-opcion">Ingresar como invitado</a>
+            </div>
+
+            <div id="formularioRegistro" class="contenedor-formulario" style="display: none;">
+                <h2>Crear cuenta</h2>
+                <form action="https://formspree.io/f/xnngzopj" method="POST">
+                    <div class="grupo-campo">
+                        <label for="registro-nombre">Nombre y Apellido</label>
+                        <input type="text" id="registro-nombre" name="nombre_completo" placeholder="Escribe tu nombre y apellido" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="registro-correo">Correo Electrónico</label>
+                        <input type="email" id="registro-correo" name="correo_electronico" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="registro-telefono">Número de Teléfono</label>
+                        <input type="tel" id="registro-telefono" name="numero_telefono" placeholder="Ej: 7000-0000" pattern="[0-9]{4}-[0-9]{4}">
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="registro-contrasena">Crear Contraseña</label>
+                        <input type="password" id="registro-contrasena" placeholder="Crea una contraseña segura" required>
+                        <i class="fas fa-eye-slash" id="togglePasswordRegistro"></i>
+                        <span id="mensajeSeguridadContrasena" class="mensaje-error"></span> 
+                    </div>
+                    <button type="submit" id="btnRegistrarse" class="btn-principal">Registrarse</button>
+                </form>
+                <a href="#" id="abrirIngreso" class="enlace-opcion">¿Ya tienes una cuenta? Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modalCarrito" class="modal-fondo">
+        <div class="modal-contenedor">
+            <span class="cerrar-modal" id="cerrarCarritoModal">&times;</span>
+            <div id="contenidoCarrito">
+                <h2>🛒 Carrito de Compras</h2>
+                <ul id="listaCarrito">
+                    </ul>
+                <p id="carritoVacio" style="text-align: center; color: gray;">El carrito está vacío.</p>
+                <div id="resumenTotal">
+                    <hr style="border-color: rgba(0, 206, 209, 0.5);">
+                    <p>Total: <strong id="totalCarrito">$0.00</strong></p>
+                </div>
+                <a href="checkout.html" class="btn-principal">Finalizar Compra</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
